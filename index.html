@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake Game</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+    <script type="text/javascript" src="js/SnakeGame.js"></script>
+    <script type="text/javascript" src="js/Storage.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <link rel="stylesheet" href="scss/SnakeGame.css"/>
+</head>
+<body>
+<script id="high_score_tmpl" type="text/template">
+    <ol class="highscores">
+        <% _.each(data, function (item) { %>
+        <li class="highscores__i">
+            <strong class="highscores__name"><%= item.name %>:</strong>
+            <span class="highscores__score"><%= item.score %></span>
+        </li>
+        <% }) %>
+    </ol>
+</script>
+<canvas id="snake_canvas" width="400" height="200"></canvas>
+<div class="score-wrap">
+    <div class="snake-name">
+        <strong>Snake name</strong><br />
+        <span id="name"></span>
+    </div>
+    <div class="score-points">
+        <strong>Score points</strong><br />
+        <span id="score">0</span>
+    </div>
+    <div class="score-points">
+        <strong>High Score</strong><br />
+        <div id="high_score"></div>
+    </div>
+</div>
+</body>
+</html>
