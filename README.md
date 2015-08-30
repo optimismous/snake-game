@@ -1,20 +1,17 @@
+Install gulp
+```
+npm install --global gulp
+```
+
 Install dependencies
 ```
-npm install -g bower
+npm install
 ```
 
-```
-bower install
-```
+Run app
 
-Install webserver
 ```
-sudo npm install http-server
-```
-
-Run webserver
-```
-http-server
+gulp
 ```
 
 Now you can visit http://localhost:8080 to view game
